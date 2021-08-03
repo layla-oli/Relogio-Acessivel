@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+      
+			function relogio(){
+				var data=new Date();
+				var hor=data.getHours();
+				var min=data.getMinutes();
+				var seg=data.getSeconds();
+				
+				if(hor < 10){
+					hor="0"+hor;
+				}
+				if(min < 10){
+					min="0"+min;
+				}
+				if(seg < 10){
+					seg="0"+seg;
+				}
+				
+				var horas=hor + ":" + min + ":" + seg;
+				
+				document.getElementById("horas").value=horas;
+			}
+      
+			var timer=setInterval(relogio,1000);
+      var font  = 100
+      
+      function mudaFonte(action){
+        if(action === '+' && font <= 300){
+          font += 5
+          document.getElementById("horas").style.fontSize = font + 'px'
+        }
+        else if(action === '-' && font >= 100 ){
+          font -= 5
+          document.getElementById("horas").style.fontSize = font + 'px'
+        }
+      }
+
+      function mudaCor(){
+        let corPrincipal = document.getElementById('corPrincipal').value
+        let corSecundaria = document.getElementById('corSecundaria').value
+
+        if(corPrincipal != corSecundaria){
+          body = document.getElementById('teste')
+          body.style.backgroundColor = corSecundaria
+
+          document.getElementById("horas").style.color = corPrincipal
+        }
+      }
+		</script>
+  </head>
+  <body id="teste">
+    <script src="script.js"></script>
+
+    <section id="container">
+      <input type ="text" id="horas" disabled />
+    </section>
+
+      <button onclick="mudaFonte('+')">+</button>
+      <button onclick="mudaFonte('-')">-</button>
+      <button onclick="mudaCor()">Mudar Cor</button>
+      <input type="color" id="corPrincipal">
+      <input type="color" id="corSecundaria">
+      
+  </body>
+</html>

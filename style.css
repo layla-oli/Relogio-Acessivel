@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 2px;
+}
+
+.navbar,
+.container {
+  display: flex;
+  flex: auto;
+  align-items: center;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  height: 100px;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.container {
+  flex-direction: column;
+  height: calc(100% - 200px);
+  background-color: white;
+  justify-content: center;
+}
+
+footer {
+  height: 100px;
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+ul li {
+  list-style: none;
+}
+
+#horario {
+  font-size: 10vmin;
+  color: black;
+  outline: none;
+  border: none transparent;
+  text-align: center;
+  background-color: transparent;
+  width: 100%;
+}

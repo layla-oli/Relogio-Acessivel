@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Relógio acessível</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar" id="navegacao">
+                <button class="btn" onclick='configLetra("+")' id = "btnMais"> + <span>Aumentar Letra</span></button>
+                <button class="btn" onclick='configLetra("-")' id = "btnMenos"> - <span>Diminuir Letra</span></button>
+                <label for="corPrimaria">Cor Primária</label>
+                <input id="corPrimaria" type="color" value="#000000">
+                <label for="corSecundaria">Cor Secundária</label>
+                <input id="corSecundaria" type="color" value="#FFFFFF">
+                <button class="btn" onclick="changeColor()" id = "btnMudar">Mudar Cor</button>
+            </nav>
+        </header>
+        <main class="container" id="relogio">
+            <input type="text" id="horario" disabled>
+        </main>
+        <footer id="rodape">
+            <h4>Instruções</h4>
+            <ul>
+                <li>Seta para cima &uArr; : Aumentar letra</li>
+                <li>Seta para baixo &dArr; : Diminuir letra</li>
+                <li>Setas esquerda e direta &lArr; &rArr; : Alternar entre as fontes</li>
+                <li>Barra de espaço: Ler Hora</li>
+            </ul>    
+        </footer>
+    </body>
+    <script src="script.js"></script>
+</html>
